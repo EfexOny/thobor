@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_application_1/detail.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
 
@@ -80,15 +81,11 @@ final List<Map> about = [
         ),
         body: Column(
           children: [
-            const SizedBox(
+             SizedBox(
               height: 360,
               width: double.infinity,
-              child: WebView(
-                debuggingEnabled: false,
-                backgroundColor: Colors.transparent,
-                // initialUrl: 'https://app.vectary.com/p/2HCulqc0nNFermKtbrtTrl',
-                javascriptMode: JavascriptMode.unrestricted,
-              ),
+              child: Image.asset(about[index]['poza'],
+              )
             ),
             Text(
               about[index]['name'],
@@ -181,14 +178,24 @@ final List<Map> about = [
                 height: 70,
                 color: const Color(0xff26B4D6),
                 child: 
-                  Center(
-                  child: Text(
-                    'See 3D',
-                    style: Theme.of(context).textTheme.headline5?.copyWith(
-                          color: Colors.white,
-                        ),
+                  GestureDetector(
+                    onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => detalii(context, index)),
+                        );
+                      },
+              
+                    child: Center(
+                    child: Text(
+                      'See 3D',
+                      style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: Colors.white,
+                          ),
+                    ),
+                                  ),
                   ),
-                ),
               ),
             ),
           ],

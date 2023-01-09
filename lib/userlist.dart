@@ -62,59 +62,66 @@ Widget userList(BuildContext context, int index) {
     child: Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
-        Center(
-          child: Container(
-              width: 100,
-              height: 100,
-              margin: const EdgeInsets.only(right: 15),
-              child: Image(image: AssetImage(details[index]['poza']))),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => murim(context, index)),
+            );
+          },
+          child: Center(
+            child: Container(
+                width: 100,
+                height: 100,
+                margin: const EdgeInsets.only(right: 15),
+                child: Image(image: AssetImage(details[index]['poza']))),
+          ),
         ),
-        Expanded(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              Text(
-                details[index]['name'],
-                style: const TextStyle(
-                    color: Color.fromRGBO(4, 71, 28, 100),
-                    fontWeight: FontWeight.bold,
-                    fontSize: 18),
-              ),
-              // const SizedBox(
-              //   height: 6,
-              // ),
-              Row(
-                children: <Widget>[
-                  const Icon(
-                    Icons.calendar_month_sharp,
-                    color: Colors.black,
-                    size: 18,
-                  ),
-                  // const SizedBox(
-                  //   width: 2,
-                  // ),
-                  Text(details[index]['country'],
-                      style:
-                          const TextStyle(color: Colors.black, fontSize: 13)),
-                  Container(
-                    width: 105,
-                    height: 65,
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => murim(context, index)),
-                        );
-                      },
+        GestureDetector(
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => murim(context, index)),
+            );
+          },
+          child: Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                Text(
+                  details[index]['name'],
+                  style: const TextStyle(
+                      color: Color.fromRGBO(4, 71, 28, 100),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18),
+                ),
+                // const SizedBox(
+                //   height: 6,
+                // ),
+                Row(
+                  children: <Widget>[
+                    const Icon(
+                      Icons.calendar_month_sharp,
+                      color: Colors.black,
+                      size: 18,
                     ),
-                  )
-                ],
-              ),
-              const SizedBox(
-                height: 6,
-              ),
-            ],
+                    // const SizedBox(
+                    //   width: 2,
+                    // ),
+                    Text(details[index]['country'],
+                        style:
+                            const TextStyle(color: Colors.black, fontSize: 13)),
+                    Container(
+                      width: 105,
+                      height: 65,
+                    )
+                  ],
+                ),
+                const SizedBox(
+                  height: 6,
+                ),
+              ],
+            ),
           ),
         )
       ],
