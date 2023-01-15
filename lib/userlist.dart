@@ -5,45 +5,39 @@ import 'package:flutter_application_1/detailpage.dart';
 
 final List<Map> details = [
   {
-    "name": "Balder",
-    "country": "Ultimate Goal",
-    "mobile": "2020-2021",
-    "text": "example",
-    "poza": "images/balder.png"
-  },
-  {
-    "name": "Loki",
-    "country": "SkyStone",
-    "mobile": "2019-2020",
-    "text": "example",
-    "poza": "images/loki.png"
+    "name": "Odin",
+    "country": "Relic Recovery",
+    "mobile": "2017-2018",
+    "poza": "images/odin.png"
   },
   {
     "name": "Thor",
     "country": "Rover Ruckus",
     "mobile": "2018-2019",
-    "text": "example",
     "poza": "images/thor.png"
   },
   {
-    "name": "Odin",
-    "country": "Relic Recovery",
-    "mobile": "2017-2018",
-    "text": "example",
-    "poza": "images/odin.png"
+    "name": "Loki",
+    "country": "SkyStone",
+    "mobile": "2019-2020",
+    "poza": "images/loki.png"
+  },
+  {
+    "name": "Balder",
+    "country": "Ultimate Goal",
+    "mobile": "2020-2021",
+    "poza": "images/balder.png"
   },
   {
     "name": "IV-an",
     "country": "Freight Frenzy",
     "mobile": "2021-2022",
-    "text": "example",
     "poza": "images/ivan.png"
   },
   {
     "name": "Zeus",
     "country": "Power Play",
     "mobile": "2022-2023",
-    "text": "example",
     "poza": "images/Zeus.png"
   },
 ];
@@ -56,7 +50,7 @@ Widget userList(BuildContext context, int index) {
       color: Colors.black12,
     ),
     width: MediaQuery.of(context).size.width,
-    height: 120,
+    height: 150,
     margin: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
     padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
     child: Row(
@@ -72,7 +66,7 @@ Widget userList(BuildContext context, int index) {
           child: Center(
             child: Container(
                 width: 100,
-                height: 100,
+                height: 130,
                 margin: const EdgeInsets.only(right: 15),
                 child: Image(image: AssetImage(details[index]['poza']))),
           ),
