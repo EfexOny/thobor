@@ -72,9 +72,7 @@ flutter:
     - obiecte/Loki.glb
     - obiecte/Odin.glb
     - obiecte/Thor.glb
-
-
-
+    - obiecte/Zeus.glb
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
