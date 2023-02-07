@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_application_1/detail.dart';
 import 'userlist.dart';
 
-class DetailPage extends StatelessWidget {
+class DetailPage extends StatefulWidget {
+  @override
+  State<DetailPage> createState() => _DetailPageState();
+}
+
+class _DetailPageState extends State<DetailPage> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,6 +33,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   @override
+
   Widget build(BuildContext context) {
     return Container(
       height: MediaQuery.of(context).size.height,
@@ -40,7 +47,7 @@ class _MyAppState extends State<MyApp> {
             child: ListView.builder(
                 itemCount: details.length,
                 itemBuilder: (BuildContext context, int index) {
-                  return detalii(context, index) ;
+                  return detalii(context, index);
                 }),
           ),
         ],

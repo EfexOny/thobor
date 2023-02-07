@@ -38,7 +38,7 @@ final List<Map> detail = [
     "path": "obiecte/IV-an.glb"
   },
   {
-    "name": "Zeus",
+    "name": "Cronos 2.0",
     "country": "Power Play",
     "mobile": "2022-2023",
     "poza": "images/Zeus.png",
@@ -46,15 +46,16 @@ final List<Map> detail = [
   },
 ];
 
+
 Widget detalii(BuildContext context, int index) {
   return Scaffold(
-    body: ModelViewer(
-      src: detail[index]["path"],
-      alt: detail[index]["name"],
-      arScale: ArScale.auto,
-      ar: true,
-      arModes: ['scene-viewer', 'webxr', 'quick-look'],
-      cameraControls: true,
-    ),
-  );
-}
+      body: ModelViewer(
+        src: detail[index]["path"],
+        alt: detail[index]["name"],
+        arScale: ArScale.auto,
+        ar: true,
+        arModes: ['scene-viewer', 'webxr', 'quick-look'],
+        cameraControls: true,
+      ),
+    );
+  }
