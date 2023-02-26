@@ -180,7 +180,7 @@ Widget murim(BuildContext context, int index) {
                       builder: (ctx) => AlertDialog(
                             title: const Text("Warning!"),
                             content: const Text(
-                                "Always ask a grown-up before using the app. Watch out out for other people when using this app and be aware of your surroundings.Parents and guardians please note: whilst using Augmented Reality there is a tendency for users to step backwards to view the robots."),
+                                "Watch out for other people when using this app and be aware of your surroundings.Parents and guardians please note: whilst using Augmented Reality there is a tendency for users to step backwards to view the robots."),
                             actions: <Widget>[
                               TextButton(
                                 onPressed: () {
@@ -193,11 +193,12 @@ Widget murim(BuildContext context, int index) {
                               ),
                               TextButton(
                                 onPressed: () {
-                                    Navigator.push(
-                                        context,
-                                        MaterialPageRoute(
-                                            builder: (context) => detalii(context, index)),    
-                                      );
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            detalii(context, index)),
+                                  );
                                 },
                                 child: Container(
                                   padding: const EdgeInsets.all(14),

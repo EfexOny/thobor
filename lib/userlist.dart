@@ -35,7 +35,7 @@ final List<Map> details = [
     "poza": "images/ivan.png"
   },
   {
-    "name": "Zeus",
+    "name": "Cronos",
     "country": "Power Play",
     "mobile": "2022-2023",
     "poza": "images/Zeus.png"
@@ -71,14 +71,7 @@ Widget userList(BuildContext context, int index) {
                 child: Image(image: AssetImage(details[index]['poza']))),
           ),
         ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => murim(context, index)),
-            );
-          },
-          child: Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
@@ -117,7 +110,6 @@ Widget userList(BuildContext context, int index) {
               ],
             ),
           ),
-        )
       ],
     ),
   );

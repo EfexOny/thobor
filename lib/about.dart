@@ -12,7 +12,7 @@ class DetailPage extends StatelessWidget {
           title: Text('THOBOR'),
         ),
         body: MyApp(),
-      ),
+      ),  
       debugShowCheckedModeBanner: false,
     );
   }

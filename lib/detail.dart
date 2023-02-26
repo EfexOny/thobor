@@ -38,7 +38,7 @@ final List<Map> detail = [
     "path": "obiecte/IV-an.glb"
   },
   {
-    "name": "Cronos 2.0",
+    "name": "Cronos",
     "country": "Power Play",
     "mobile": "2022-2023",
     "poza": "images/Zeus.png",
@@ -54,7 +54,6 @@ Widget detalii(BuildContext context, int index) {
         alt: detail[index]["name"],
         arScale: ArScale.auto,
         ar: true,
-        arModes: ['scene-viewer', 'webxr', 'quick-look'],
         cameraControls: true,
       ),
     );
